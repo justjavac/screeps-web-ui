@@ -2,9 +2,9 @@ import { Socket } from "./Socket";
 import { RawAPI } from "./RawAPI";
 
 const DEFAULTS = {
-  protocol: "http",
+  protocol: "https",
   hostname: "screeps.devtips.cn",
-  port: 21025,
+  port: 443,
   path: "/",
 };
 
