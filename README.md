@@ -1,46 +1,37 @@
-# Getting Started with Create React App
+# Screeps Web UI（WIP）
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+使用 React 实现的自定义 Screeps Web UI。在线演示地址 [https://screeps.devtips.cn/a](https://screeps.devtips.cn/a)
 
-## Available Scripts
+## 背景
 
-In the project directory, you can run:
+Screeps 是一款面向编程爱好者的开源 MMO RTS 沙盒游戏，其核心机制是为您的单位编写AI。您可以通过编写 JavaScript 来控制自己的殖民地。
 
-### `npm start`
+- [给前端程序员推荐一款游戏 Screeps：使用 JS/TS 代码控制自己的殖民地](https://zhuanlan.zhihu.com/p/330082031)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Screeps 的后端代码是开源的，可以在自己的服务器上搭建一个游戏私服，但是前端 UI 并没有开源。只能通过 Sream 客户端来连接游戏服务器。于是我开发了这个 Web UI。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 进度
 
-### `npm test`
+⚠️ 目前只是一个 demo 版本，刚刚完成了房间地图的绘制和单位的显示。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 本地开发
 
-### `npm run build`
+clone 本仓库，运行 `npm start`。
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone git@github.com:justjavac/screeps-web-ui.git
+cd screeps-web-ui
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+如果没有报错，则说明本地服务已经正常启动。
+在浏览器中打开 [http://localhost:3000](http://localhost:3000) 可以看到页面。
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 说明
 
-### `npm run eject`
+Api 部分的代码在 [node-screeps-api](https://github.com/screepers/node-screeps-api) 的代码库基础上进行了修改，并适配了浏览器。将来此部分代码会基于 [swr](https://github.com/vercel/swr) 使用 React Hooks 重写。
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 许可证
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+[zhihu-trending-hot-questions](https://github.com/justjavac/zhihu-trending-hot-questions) 的源码使用 MIT License 发布。具体内容请查看 [LICENSE](./LICENSE) 文件。
