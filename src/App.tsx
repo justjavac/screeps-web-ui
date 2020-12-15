@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+
+import ErrorBoundary from "./components/ErrorBoundary";
+import Loading from "./components/loading/Loading";
+import Game from "./components/Game";
+
+import useAuth from "./hooks/useAuth";
+
+const username = "demo";
+const password = "123456";
 
 function App() {
+  const [token, loading, error] = useAuth(username, password);
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error != null || token == null) {
+    console.error(error, token);
+    return <h2>Something went wrong.</h2>;
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ErrorBoundary fallback={<h2>Something went wrong.</h2>}>
+      {/* <Game room="W3N5" /> */}
+      <Game room="W6N7" />
+    </ErrorBoundary>
   );
 }
 
