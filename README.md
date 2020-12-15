@@ -34,4 +34,4 @@ Api 部分的代码在 [node-screeps-api](https://github.com/screepers/node-scre
 
 ### 许可证
 
-[zhihu-trending-hot-questions](https://github.com/justjavac/zhihu-trending-hot-questions) 的源码使用 MIT License 发布。具体内容请查看 [LICENSE](./LICENSE) 文件。
+[screeps-web-ui](https://github.com/justjavac/screeps-web-ui) 的源码使用 MIT License 发布。具体内容请查看 [LICENSE](./LICENSE) 文件。
