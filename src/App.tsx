@@ -25,8 +25,7 @@ function App() {
 
   return (
     <ErrorBoundary fallback={<h2>Something went wrong.</h2>}>
-      {/* <Game room="W3N5" /> */}
-      <Game room="W6N7" />
+      <Game room="W10N10" />
     </ErrorBoundary>
   );
 }

@@ -11,7 +11,7 @@ const woldConfigs = {
   BADGE_URL: "https://screeps.devtips.cn/api/user/badge-svg?username=%1",
   metadata: window.RENDERER_METADATA,
   gameData: {
-    player: "",
+    player: "5fd8550610a11805f1ab1bf5",
     showMyNames: {
       spawns: true,
       creeps: true,
