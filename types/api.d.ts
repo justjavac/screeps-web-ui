@@ -23,13 +23,13 @@ declare namespace API {
         username: string;
         badge?: {
           color1: string;
-color2: string;
-color3: string;
-flip: boolean;
-param: number;
-type: number;
-        }
-      }
-    }
+          color2: string;
+          color3: string;
+          flip: boolean;
+          param: number;
+          type: number;
+        };
+      };
+    };
   }
 }

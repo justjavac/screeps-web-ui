@@ -68,7 +68,11 @@ declare module "@screeps/renderer" {
 
     init(): Promise<void>;
 
-    applyState(state: Partial<State>, tickDuration: number, globalOnly: boolean): void;
+    applyState(
+      state: Partial<State>,
+      tickDuration: number,
+      globalOnly: boolean,
+    ): void;
 
     runStatePreprocessor(
       preprocessors: Array<Preprocessor>,
