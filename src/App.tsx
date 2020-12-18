@@ -13,7 +13,7 @@ const password = "123456";
 
 function App() {
   const [token, loading, error] = useAuth(username, password);
-  const room = localStorage.getItem("room") ?? "W12N1";
+  const room = localStorage.getItem("room") ?? "W12N12";
 
   if (loading) {
     return <Loading />;
