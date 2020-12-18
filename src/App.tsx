@@ -13,6 +13,7 @@ const password = "123456";
 
 function App() {
   const [token, loading, error] = useAuth(username, password);
+  const room = localStorage.getItem("room") ?? "W12N1";
 
   if (loading) {
     return <Loading />;
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <ErrorBoundary fallback={<h2>Something went wrong.</h2>}>
-      <Game room="W10N10" />
+      <Game room={room} />
     </ErrorBoundary>
   );
 }
